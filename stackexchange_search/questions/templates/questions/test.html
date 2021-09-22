@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>test</title>
+</head>
+<body>
+<form method="GET" action="{% url 'search' %}">
+	{% csrf_token %}
+	<input type="text" placeholder="page" name="page"><br>
+	<input type="text" placeholder="pagesize" name="pagesize"><br>
+	<input type="text" placeholder="order (asc/desc)" name="order"><br>
+	<input type="text" placeholder="minimum votes" name="minvote"><br>
+	<input type="text" placeholder="maximum votes" name="maxvote"><br>
+	<input type="text" placeholder="tagged" name="tagged"><br>
+	<input type="submit" name="submit" value="Search Questions">
+</form>
+</body>
+</html>
